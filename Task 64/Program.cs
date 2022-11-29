@@ -4,15 +4,18 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-int NaturalNumbers(int n)
-{
-    if (n == 0)
-        return Console.WriteLine("Неверное значение");
-    else 
-        return NaturalNumbers(n - 1);
+Console.WriteLine("Введите число N");
+int n =  Convert.ToInt32(Console.ReadLine());
 
+
+int Recursion(int n)
+{
+     
+            if (n == 1) return 1;
+            else return Recursion (n - 1) - 1;
 }
 
-Console.WriteLine("Введите натуральноe число N");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(NaturalNumbers);
+for (int i = 1; i < 10 ; i++)
+{
+    Console.WriteLine(Recursion(i));
+}
