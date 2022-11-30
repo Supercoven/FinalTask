@@ -10,12 +10,11 @@ int n =  Convert.ToInt32(Console.ReadLine());
 
 int Recursion(int n)
 {
-     
             if (n == 1) return 1;
-            else return Recursion (n - 1) - 1;
+            else return Recursion (n - 1) * n;
 }
 
-for (int i = 1; i < 10 ; i++)
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine(Recursion(i));
+    Console.WriteLine(Recursion(n));
 }
