@@ -7,14 +7,17 @@
 Console.WriteLine("Введите число N");
 int n =  Convert.ToInt32(Console.ReadLine());
 
-
 int Recursion(int n)
 {
-            if (n == 1) return 1;
-            else return Recursion (n - 1) * n;
-}
+            if (n >= 1)
+            {
+            Console.Write($" {n} |");
+            return Recursion (n - 1);
+            }
+            else return 1;
 
-for (int i = 0; i < 10; i++)
-{
-    Console.WriteLine(Recursion(n));
+        
 }
+Console.WriteLine("Натуральные числа от N до 1: ");
+Recursion(n);
+
